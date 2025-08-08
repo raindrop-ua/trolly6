@@ -100,13 +100,27 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
   "schematics": {
     "@schematics/angular:component": {
-      "type": "component"
+      "type": "component",
+      "standalone": true,
+      "style": "scss",
+      "skipTests": true,
+      "flat": false,
+      "changeDetection": "OnPush"
     },
     "@schematics/angular:directive": {
       "type": "directive"
@@ -131,6 +145,9 @@
     }
   },
   "cli": {
-    "analytics": "6ab52723-3615-48ec-81a3-9cdc1cff3782"
+    "analytics": "6ab52723-3615-48ec-81a3-9cdc1cff3782",
+    "schematicCollections": [
+      "angular-eslint"
+    ]
   }
 }
