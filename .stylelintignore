@@ -1,0 +1,7 @@
+dist
+browser
+server
+node_modules
+.angular
+coverage
+**/*.min.css

@@ -1,0 +1,8 @@
+dist
+browser
+server
+node_modules
+coverage
+.angular
+.tmp
+package-lock.json

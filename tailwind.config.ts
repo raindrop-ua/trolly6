@@ -1,4 +1,4 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
 
 export default {
   content: ['./src/**/*.{html,ts}'],
@@ -6,4 +6,4 @@ export default {
     extend: {},
   },
   darkMode: 'class',
-} satisfies Config
+} satisfies Config;

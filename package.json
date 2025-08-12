@@ -7,7 +7,12 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:trolly6": "node dist/trolly6/server/server.mjs"
+    "serve:ssr:trolly6": "node dist/trolly6/server/server.mjs",
+    "lint": "ng lint",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint:styles": "stylelint \"src/**/*.{css,scss,html}\"",
+    "lint:styles:fix": "stylelint --fix \"src/**/*.{css,scss,html}\""
   },
   "private": true,
   "dependencies": {
@@ -19,8 +24,9 @@
     "@angular/platform-browser-dynamic": "^20.1.6",
     "@angular/platform-server": "^20.1.6",
     "@angular/router": "^20.1.6",
-    "@angular/service-worker": "^20.1.4",
+    "@angular/service-worker": "^20.1.6",
     "@angular/ssr": "^20.1.5",
+    "@eslint/js": "^9.33.0",
     "@netlify/angular-runtime": "^2.4.0",
     "@tailwindcss/cli": "^4.1.11",
     "@tailwindcss/postcss": "^4.1.11",
@@ -34,16 +40,24 @@
     "@angular/build": "^20.1.5",
     "@angular/cli": "^20.1.5",
     "@angular/compiler-cli": "^20.1.6",
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
     "@types/express": "^4.17.17",
     "@types/jasmine": "~5.1.0",
     "@types/node": "^18.18.0",
+    "angular-eslint": "20.1.1",
+    "eslint": "^9.29.0",
+    "eslint-config-prettier": "^10.1.8",
     "jasmine-core": "~5.6.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.6.14",
+    "stylelint": "^16.23.1",
     "tailwindcss": "^4.1.11",
-    "typescript": "~5.8.3"
+    "typescript": "~5.8.3",
+    "typescript-eslint": "8.34.1"
   }
 }
