@@ -104,7 +104,12 @@
   },
   "schematics": {
     "@schematics/angular:component": {
-      "type": "component"
+      "type": "component",
+      "style": "scss",
+      "standalone": true,
+      "skipTests": true,
+      "flat": true,
+      "changeDetection": "OnPush"
     },
     "@schematics/angular:directive": {
       "type": "directive"
