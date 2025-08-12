@@ -6,3 +6,10 @@
     background: linear-gradient(135deg, #0f0f23, #1a1a2e, #16213e);
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  .glass {
+    background: #ffffff0d;
+    border: 1px solid rgb(255 255 255 / 10%);
+  }
+}
