@@ -20,7 +20,7 @@
     "@angular/platform-server": "^20.1.4",
     "@angular/router": "^20.1.4",
     "@angular/service-worker": "^20.1.4",
-    "@angular/ssr": "^20.1.4",
+    "@angular/ssr": "^20.1.5",
     "@netlify/angular-runtime": "^2.4.0",
     "@tailwindcss/cli": "^4.1.11",
     "@tailwindcss/postcss": "^4.1.11",
@@ -31,8 +31,8 @@
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
-    "@angular/build": "^20.1.4",
-    "@angular/cli": "^20.1.4",
+    "@angular/build": "^20.1.5",
+    "@angular/cli": "^20.1.5",
     "@angular/compiler-cli": "^20.1.4",
     "@types/express": "^4.17.17",
     "@types/jasmine": "~5.1.0",
