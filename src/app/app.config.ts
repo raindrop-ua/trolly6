@@ -7,6 +7,8 @@ import { provideStore } from '@ngrx/store';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
 
 import { routes } from './app.routes';
+import { provideEffects } from '@ngrx/effects';
+import { provideRouterStore } from '@ngrx/router-store';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -14,16 +16,18 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideClientHydration(withEventReplay()),
     provideServiceWorker('ngsw-worker.js', {
-      enabled: !isDevMode(),
-      registrationStrategy: 'registerWhenStable:30000',
+        enabled: !isDevMode(),
+        registrationStrategy: 'registerWhenStable:30000',
     }),
     provideStore(),
     provideStoreDevtools({
-      maxAge: 25,
-      autoPause: true,
-      logOnly: !isDevMode(),
-      trace: true,
-      traceLimit: 75,
+        maxAge: 25,
+        autoPause: true,
+        logOnly: !isDevMode(),
+        trace: true,
+        traceLimit: 75,
     }),
-  ],
+    provideEffects(),
+    provideRouterStore()
+],
 };
