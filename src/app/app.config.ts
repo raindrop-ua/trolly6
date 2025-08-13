@@ -4,6 +4,7 @@ import { provideRouter } from '@angular/router';
 import { provideServiceWorker } from '@angular/service-worker';
 
 import { provideStore } from '@ngrx/store';
+import { provideStoreDevtools } from '@ngrx/store-devtools';
 
 import { routes } from './app.routes';
 
@@ -17,5 +18,12 @@ export const appConfig: ApplicationConfig = {
       registrationStrategy: 'registerWhenStable:30000',
     }),
     provideStore(),
+    provideStoreDevtools({
+      maxAge: 25,
+      autoPause: true,
+      logOnly: !isDevMode(),
+      trace: true,
+      traceLimit: 75,
+    }),
   ],
 };
