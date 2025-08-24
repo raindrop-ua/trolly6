@@ -1,0 +1,43 @@
+<div class="flex items-center gap-2">
+  @defer (on idle) {
+    <button
+      type="button"
+      (click)="toggleTheme()"
+      class="cursor-pointer w-10 h-10 inline-flex items-center justify-center rounded-xl border border-gray-200/70 bg-white/80 px-3 py-2 text-sm font-medium text-gray-700 shadow-sm transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 dark:border-gray-700/70 dark:bg-gray-900/70 dark:text-gray-100 dark:hover:bg-gray-900 dark:focus-visible:outline-white"
+      [attr.aria-label]="'Theme: ' + themeSignal()"
+      [attr.title]="'Theme: ' + themeSignal() + ' — click to toggle'"
+    >
+      @if (themeSignal() === 'light') {
+        <svg
+          aria-hidden="true"
+          class="size-4"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <circle cx="12" cy="12" r="4" />
+          <path
+            d="M12 2v2m0 16v2m10-10h-2M4 12H2m15.5 6.5-1.5-1.5M8 8 6.5 6.5m11 0L16.5 8M8 16.5 6.5 18"
+          />
+        </svg>
+      } @else {
+        <svg
+          aria-hidden="true"
+          class="size-4"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </svg>
+      }
+      <span class="sr-only">Toggle theme</span>
+    </button>
+  } @placeholder {
+    <div
+      class="w-10 h-10 inline-flex items-center justify-center rounded-xl border border-gray-200/70 bg-white/80 px-3 py-2 text-sm font-medium text-gray-700 shadow-sm transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 dark:border-gray-700/70 dark:bg-gray-900/70 dark:text-gray-100 dark:hover:bg-gray-900 dark:focus-visible:outline-white"
+    ></div>
+  }
+</div>
