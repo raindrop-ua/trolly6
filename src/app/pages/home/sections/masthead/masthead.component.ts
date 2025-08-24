@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { AppRouteEnum } from '@core/enums/app-route.enum';
 
 @Component({
   selector: 'app-masthead',
@@ -11,4 +12,5 @@ import { RouterLink } from '@angular/router';
 })
 export class MastheadComponent {
 
+  protected readonly AppRouteEnum = AppRouteEnum;
 }

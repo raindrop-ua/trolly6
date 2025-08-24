@@ -1,8 +1,8 @@
 <section class="container mx-auto max-w-6xl px-4 py-6 md:py-8">
   <div class="mb-4 flex flex-wrap items-center justify-between gap-3">
     <div class="flex items-center gap-2">
-      <button type="button" class="rounded-xl bg-slate-900/5 px-3 py-1.5 text-sm font-medium ring-1 ring-slate-900/10 hover:bg-slate-900/10 dark:bg-white/5 dark:text-slate-200 dark:ring-white/10">Show all</button>
-      <button type="button" class="rounded-xl px-3 py-1.5 text-sm ring-1 ring-slate-900/10 hover:bg-slate-900/5 dark:text-slate-300 dark:ring-white/10">Show only upcoming</button>
+      <button type="button" class="cursor-pointer rounded-xl bg-slate-900/5 px-3 py-1.5 text-sm font-medium ring-1 ring-slate-900/10 hover:bg-slate-900/10 dark:bg-white/5 dark:text-slate-200 dark:ring-white/10">Show all</button>
+      <button type="button" class="cursor-pointer rounded-xl px-3 py-1.5 text-sm ring-1 ring-slate-900/10 hover:bg-slate-900/5 dark:text-slate-300 dark:ring-white/10">Show only upcoming</button>
     </div>
     <div class="flex items-center gap-2 text-lg text-slate-500 dark:text-slate-400">
           <span class="">
@@ -15,44 +15,44 @@
   <!-- Times grid (demo state colors) -->
   <div class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 gap-2">
     <!-- past -->
-    <div class="rounded-xl bg-slate-800/10 px-3 py-2 text-center text-sm text-slate-600 dark:bg-white/5 dark:text-slate-400">6:00</div>
-    <div class="rounded-xl bg-slate-800/10 px-3 py-2 text-center text-sm text-slate-600 dark:bg-white/5 dark:text-slate-400">6:26</div>
-    <div class="rounded-xl bg-slate-800/10 px-3 py-2 text-center text-sm text-slate-600 dark:bg-white/5 dark:text-slate-400">6:52</div>
-    <div class="rounded-xl bg-slate-800/10 px-3 py-2 text-center text-sm text-slate-600 dark:bg-white/5 dark:text-slate-400">7:18</div>
-    <div class="rounded-xl bg-slate-800/10 px-3 py-2 text-center text-sm text-slate-600 dark:bg-white/5 dark:text-slate-400">7:45</div>
-    <div class="rounded-xl bg-slate-800/10 px-3 py-2 text-center text-sm text-slate-600 dark:bg-white/5 dark:text-slate-400">8:10</div>
-    <div class="rounded-xl bg-slate-800/10 px-3 py-2 text-center text-sm text-slate-600 dark:bg-white/5 dark:text-slate-400">8:38</div>
-    <div class="rounded-xl bg-slate-800/10 px-3 py-2 text-center text-sm text-slate-600 dark:bg-white/5 dark:text-slate-400">9:04</div>
-    <div class="rounded-xl bg-slate-800/10 px-3 py-2 text-center text-sm text-slate-600 dark:bg-white/5 dark:text-slate-400">9:31</div>
+    <div class="rounded-xl bg-slate-800/10 px-3 py-2 text-center text-base text-slate-600 dark:bg-white/5 dark:text-slate-400">6:00</div>
+    <div class="rounded-xl bg-slate-800/10 px-3 py-2 text-center text-base text-slate-600 dark:bg-white/5 dark:text-slate-400">6:26</div>
+    <div class="rounded-xl bg-slate-800/10 px-3 py-2 text-center text-base text-slate-600 dark:bg-white/5 dark:text-slate-400">6:52</div>
+    <div class="rounded-xl bg-slate-800/10 px-3 py-2 text-center text-base text-slate-600 dark:bg-white/5 dark:text-slate-400">7:18</div>
+    <div class="rounded-xl bg-slate-800/10 px-3 py-2 text-center text-base text-slate-600 dark:bg-white/5 dark:text-slate-400">7:45</div>
+    <div class="rounded-xl bg-slate-800/10 px-3 py-2 text-center text-base text-slate-600 dark:bg-white/5 dark:text-slate-400">8:10</div>
+    <div class="rounded-xl bg-slate-800/10 px-3 py-2 text-center text-base text-slate-600 dark:bg-white/5 dark:text-slate-400">8:38</div>
+    <div class="rounded-xl bg-slate-800/10 px-3 py-2 text-center text-base text-slate-600 dark:bg-white/5 dark:text-slate-400">9:04</div>
+    <div class="rounded-xl bg-slate-800/10 px-3 py-2 text-center text-base text-slate-600 dark:bg-white/5 dark:text-slate-400">9:31</div>
 
     <!-- "warning" (very soon) example -->
-    <div class="rounded-xl bg-red-500/80 px-3 py-2 text-center text-sm font-semibold text-white">10:43</div>
+    <div class="rounded-xl bg-red-500/80 px-3 py-2 text-center text-base font-semibold text-white">10:43</div>
 
     <!-- next imminent example -->
-    <div class="rounded-xl bg-amber-400 px-3 py-2 text-center text-sm font-semibold text-slate-900">11:10</div>
+    <div class="rounded-xl bg-amber-400 px-3 py-2 text-center text-base font-semibold text-slate-900">11:10</div>
 
     <!-- upcoming -->
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-sm font-medium text-teal-900 dark:text-teal-100">11:36</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-sm font-medium text-teal-900 dark:text-teal-100">12:02</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-sm font-medium text-teal-900 dark:text-teal-100">12:28</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-sm font-medium text-teal-900 dark:text-teal-100">12:54</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-sm font-medium text-teal-900 dark:text-teal-100">13:20</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-sm font-medium text-teal-900 dark:text-teal-100">13:46</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-sm font-medium text-teal-900 dark:text-teal-100">14:12</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-sm font-medium text-teal-900 dark:text-teal-100">14:38</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-sm font-medium text-teal-900 dark:text-teal-100">15:04</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-sm font-medium text-teal-900 dark:text-teal-100">15:30</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-sm font-medium text-teal-900 dark:text-teal-100">15:56</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-sm font-medium text-teal-900 dark:text-teal-100">16:22</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-sm font-medium text-teal-900 dark:text-teal-100">16:48</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-sm font-medium text-teal-900 dark:text-teal-100">17:14</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-sm font-medium text-teal-900 dark:text-teal-100">17:41</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-sm font-medium text-teal-900 dark:text-teal-100">18:08</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-sm font-medium text-teal-900 dark:text-teal-100">18:35</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-sm font-medium text-teal-900 dark:text-teal-100">19:02</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-sm font-medium text-teal-900 dark:text-teal-100">19:25</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-sm font-medium text-teal-900 dark:text-teal-100">19:52</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-sm font-medium text-teal-900 dark:text-teal-100">21:07</div>
+    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">11:36</div>
+    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">12:02</div>
+    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">12:28</div>
+    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">12:54</div>
+    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">13:20</div>
+    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">13:46</div>
+    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">14:12</div>
+    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">14:38</div>
+    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">15:04</div>
+    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">15:30</div>
+    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">15:56</div>
+    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">16:22</div>
+    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">16:48</div>
+    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">17:14</div>
+    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">17:41</div>
+    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">18:08</div>
+    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">18:35</div>
+    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">19:02</div>
+    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">19:25</div>
+    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">19:52</div>
+    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">21:07</div>
   </div>
 
 
