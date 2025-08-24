@@ -34,6 +34,19 @@ export const routes: Routes = [
         loadComponent: () =>
           import('./pages/schedule/schedule.component').then((m) => m.ScheduleComponent),
       },
+      {
+        path: 'about',
+        data: {
+          preload: true,
+          animation: 'About',
+          seo: {
+            title: 'About | TrollySix',
+            description: 'Ultimate schedule for trolleybus route number 6.',
+            keywords: 'trolleybus, route 6, schedule',
+          },
+        },
+        loadComponent: () => import('./pages/about/about.component').then((m) => m.AboutComponent),
+      },
     ],
   },
   {
