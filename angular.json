@@ -20,7 +20,7 @@
             "outputPath": "dist/trolly6",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": ["zone.js"],
+            "polyfills": [],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -108,7 +108,7 @@
       "style": "scss",
       "standalone": true,
       "skipTests": true,
-      "flat": true,
+      "flat": false,
       "changeDetection": "OnPush"
     },
     "@schematics/angular:directive": {
