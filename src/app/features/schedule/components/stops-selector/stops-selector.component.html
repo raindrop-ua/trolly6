@@ -5,44 +5,28 @@
   </div>
 
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-    <!-- Card: Pridniprovsk (selected demo) -->
-    <button type="button" aria-pressed="true"
-            class="cursor-pointer group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-sky-400/20 via-cyan-400/20 to-blue-500/20 p-4 text-left shadow-sm ring-2 ring-sky-400/50 dark:from-sky-500/15 dark:via-cyan-500/15 dark:to-blue-600/15">
-      <div class="absolute inset-0 -z-10 backdrop-blur-sm"></div>
-      <div class="flex items-start justify-between">
-        <div>
-          <div class="text-sm text-slate-500 dark:text-slate-400">Stop</div>
-          <div class="mt-1 text-lg font-semibold text-slate-900 dark:text-white">Pridniprovsk</div>
+    @for (stop of stops(); track stop) {
+      @let selected = selectedStopId() === stop.id;
+      <button type="button"
+              class="stop-card"
+              [attr.aria-pressed]="selected"
+              [class.stop-card-1]="stop.style === 1"
+              [class.stop-card-2]="stop.style === 2"
+              [class.stop-card-3]="stop.style === 3"
+              (click)="selectStop(stop.id)"
+      >
+        <div class="absolute inset-0 -z-10 backdrop-blur-sm"></div>
+        <div class="flex items-start justify-between">
+          <div>
+            <div class="text-sm text-slate-500 dark:text-slate-400">Stop</div>
+            <div class="mt-1 text-lg font-semibold text-slate-900 dark:text-white">{{ stop.name }}</div>
+          </div>
+          @if (selected) {
+            <span class="rounded-full bg-white px-2 py-0.5 text-xs text-black dark:bg-white/10 dark:text-white">selected</span>
+          }
         </div>
-        <span class="rounded-full bg-sky-500/20 px-2 py-0.5 text-xs text-sky-800 dark:text-sky-200">selected</span>
-      </div>
-      <p class="mt-3 line-clamp-2 text-sm text-slate-600 dark:text-slate-300">Residential district. Near river embankment.</p>
-    </button>
-
-    <!-- Card: Mechnikov Hospital -->
-    <button type="button"
-            class="cursor-pointer relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-emerald-400/15 via-teal-400/15 to-emerald-500/15 p-4 text-left shadow-sm hover:ring-2 hover:ring-emerald-400/50">
-      <div class="absolute inset-0 -z-10 backdrop-blur-[2px]"></div>
-      <div class="flex items-start justify-between">
-        <div>
-          <div class="text-sm text-slate-500 dark:text-slate-400">Stop</div>
-          <div class="mt-1 text-lg font-semibold text-slate-900 dark:text-white">Mechnikov Hospital</div>
-        </div>
-      </div>
-      <p class="mt-3 line-clamp-2 text-sm text-slate-600 dark:text-slate-300">Regional clinical hospital hub.</p>
-    </button>
-
-    <!-- Card: Historical Museum -->
-    <button type="button"
-            class="cursor-pointer relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-fuchsia-400/15 via-purple-400/15 to-indigo-500/15 p-4 text-left shadow-sm hover:ring-2 hover:ring-fuchsia-400/50">
-      <div class="absolute inset-0 -z-10 backdrop-blur-[2px]"></div>
-      <div class="flex items-start justify-between">
-        <div>
-          <div class="text-sm text-slate-500 dark:text-slate-400">Stop</div>
-          <div class="mt-1 text-lg font-semibold text-slate-900 dark:text-white">Historical Museum</div>
-        </div>
-      </div>
-      <p class="mt-3 line-clamp-2 text-sm text-slate-600 dark:text-slate-300">City center — scenic viewpoint.</p>
-    </button>
+        <p class="mt-3 line-clamp-2 text-sm text-slate-600 dark:text-slate-300">{{ stop.description }}</p>
+      </button>
+    }
   </div>
 </section>
