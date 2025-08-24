@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { AppRouteEnum } from '@core/enums/app-route.enum';
 
 @Component({
   selector: 'app-ready-for-route-six',
@@ -11,4 +12,5 @@ import { RouterLink } from '@angular/router';
 })
 export class ReadyForRouteSixComponent {
 
+  protected readonly AppRouteEnum = AppRouteEnum;
 }

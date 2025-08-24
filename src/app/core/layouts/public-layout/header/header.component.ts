@@ -16,7 +16,7 @@ import { AppRouteEnum } from '@core/enums/app-route.enum';
 export class HeaderComponent {
   private router = inject(Router);
   public navigation = inject(NAVIGATION_TOKEN);
-  public readonly showSticky = signal<boolean>(true);
+  public readonly showSticky = signal<boolean>(false);
 
   public isLinkActive(path: string): boolean {
     return this.router.isActive(path, {

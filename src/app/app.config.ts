@@ -1,3 +1,4 @@
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import {
   ApplicationConfig,
   inject,
@@ -15,7 +16,7 @@ import { provideEffects } from '@ngrx/effects';
 import { provideRouterStore } from '@ngrx/router-store';
 import { provideStore } from '@ngrx/store';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
-import { SeoService } from '@services/seo.service';
+import { SeoService } from '@shared/services/seo.service';
 
 import { routes } from './app.routes';
 
@@ -23,6 +24,7 @@ export const appConfig: ApplicationConfig = {
   providers: [
     { provide: NAVIGATION_TOKEN, useValue: NAVIGATION },
     provideZonelessChangeDetection(),
+    provideHttpClient(withInterceptorsFromDi()),
     provideRouter(
       routes,
       withPreloading(AfterFirstPaintPreloadingStrategy),
