@@ -1,7 +1,7 @@
 <div class="container mx-auto max-w-6xl px-4 py-3">
   <div class="flex items-center justify-between gap-4">
     <div class="flex items-center gap-8">
-      <a routerLink="/"
+      <a [routerLink]="[AppRouteEnum.Home]"
          class="font-bold flex items-center  gap-2 tracking-tight text-xl md:text-2xl text-slate-900 dark:text-slate-100">
         <svg width="24" height="30" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M11.1178 1H13.8543L11.1178 7.13072H8.38134L11.1178 1Z" fill="currentColor" />
@@ -22,7 +22,7 @@
             d="M21.5237 12.7856C21.5237 12.6845 21.6043 12.6026 21.7038 12.6026H22.82C22.9194 12.6026 23 12.6845 23 12.7856V15.8235C23 15.9246 22.9194 16.0065 22.82 16.0065H21.7038C21.6043 16.0065 21.5237 15.9246 21.5237 15.8235V12.7856Z"
             fill="currentColor" />
         </svg>
-        <span>TrollySix</span>
+        <span>Trolly Six</span>
       </a>
       <nav class="hidden md:block">
         <ul class="flex items-center gap-6 text-lg">
@@ -42,7 +42,7 @@
       <app-theme-switcher />
       <div class="md:hidden">
         <button type="button"
-                class="cursor-pointer p-2 rounded-lg transition-all duration-200 text-blue-100 dark:text-gray-300 bg-blue-50 dark:bg-slate-800 hover:bg-blue-100 dark:hover:bg-slate-700">
+                class="cursor-pointer w-10 h-10 inline-flex items-center justify-center rounded-xl border border-gray-200/70 bg-white/80 px-3 py-2 text-sm font-medium text-gray-700 shadow-sm transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 dark:border-gray-700/70 dark:bg-gray-900/70 dark:text-gray-100 dark:hover:bg-gray-900 dark:focus-visible:outline-white">
           <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
@@ -58,26 +58,24 @@
     <div class="container mx-auto max-w-6xl px-4 py-3 flex flex-wrap items-center justify-between gap-3">
       <div class="flex items-center gap-2">
         <button type="button"
-                class="rounded-xl bg-slate-900/5 px-3 py-1.5 text-sm font-medium ring-1 ring-slate-900/10 hover:bg-slate-900/10 dark:bg-white/5 dark:text-slate-200 dark:ring-white/10">
+                class="cursor-pointer rounded-xl bg-slate-900/5 px-3 py-1.5 text-sm font-medium ring-1 ring-slate-900/10 hover:bg-slate-900/10 dark:bg-white/5 dark:text-slate-200 dark:ring-white/10">
           Show all
         </button>
         <button type="button"
-                class="rounded-xl px-3 py-1.5 text-sm ring-1 ring-slate-900/10 hover:bg-slate-900/5 dark:text-slate-300 dark:ring-white/10 dark:hover:bg-white/5">
+                class="cursor-pointer rounded-xl px-3 py-1.5 text-sm ring-1 ring-slate-900/10 hover:bg-slate-900/5 dark:text-slate-300 dark:ring-white/10 dark:hover:bg-white/5">
           Upcoming
         </button>
       </div>
       <div class="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
         <span class="">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-               class="lucide lucide-clock2-icon lucide-clock-2"><path d="M12 6v6l4-2" /><circle cx="12" cy="12"
-                                                                                                r="10" /></svg>
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 6v6l4-2" /><circle cx="12" cy="12" r="10" />
+          </svg>
         </span>
         <span>10:41</span>
       </div>
     </div>
-    <div
-      class="h-px w-full bg-gradient-to-r from-transparent via-gray-200/80 to-transparent dark:via-gray-700/70"></div>
   </div>
 }
 

@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/cor
 import { Router, RouterLink } from '@angular/router';
 import { NAVIGATION_TOKEN } from '@core/config/navigation.config';
 import { ThemeSwitcherComponent } from '@components/theme-switcher/theme-switcher.component';
+import { AppRouteEnum } from '@core/enums/app-route.enum';
 
 @Component({
   selector: 'app-header',
@@ -25,4 +26,6 @@ export class HeaderComponent {
       fragment: 'ignored',
     });
   }
+
+  protected readonly AppRouteEnum = AppRouteEnum;
 }
