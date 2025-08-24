@@ -1,4 +1,4 @@
-<header class="sticky top-0 z-50 border-b border-white/10 bg-white/60 backdrop-blur-xl dark:bg-slate-900/50">
+<header class="sticky top-0 z-50 bg-white/60 backdrop-blur-xl dark:bg-slate-900/50">
   <div class="container mx-auto max-w-6xl px-4 py-3">
     <div class="flex items-center justify-between gap-4">
       <div class="flex items-center gap-8">
@@ -15,6 +15,23 @@
 
       <!-- Theme toggle placeholder (no logic) -->
       <app-theme-switcher/>
+    </div>
+  </div>
+  <div class="h-px w-full bg-gradient-to-r from-transparent via-gray-200/80 to-transparent dark:via-gray-700/70"></div>
+
+  <!-- Sticky filters panel -->
+  <div class="sticky top-[56px] z-40 border-t border-white/10 bg-white/70 backdrop-blur-md dark:bg-slate-900/60">
+    <div class="container mx-auto max-w-6xl px-4 py-3 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-2">
+        <button type="button" class="rounded-xl bg-slate-900/5 px-3 py-1.5 text-sm font-medium ring-1 ring-slate-900/10 hover:bg-slate-900/10 dark:bg-white/5 dark:text-slate-200 dark:ring-white/10">Show all</button>
+        <button type="button" class="rounded-xl px-3 py-1.5 text-sm ring-1 ring-slate-900/10 hover:bg-slate-900/5 dark:text-slate-300 dark:ring-white/10 dark:hover:bg-white/5">Upcoming</button>
+      </div>
+      <div class="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
+        <span class="">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock2-icon lucide-clock-2"><path d="M12 6v6l4-2"/><circle cx="12" cy="12" r="10"/></svg>
+        </span>
+        <span>10:41</span>
+      </div>
     </div>
   </div>
 </header>
