@@ -6,4 +6,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   templateUrl: './stop-details.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class StopDetailsComponent {}
+export class StopDetailsComponent {
+  protected sharedRoutes = ['1','4','9','16','21','B'];
+
+}
