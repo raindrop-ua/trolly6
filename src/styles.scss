@@ -3,3 +3,7 @@
 
 @custom-variant dark (&:where(.dark, .dark *, [data-theme="dark"], [data-theme="dark"] *));
 
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
