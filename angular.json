@@ -108,7 +108,7 @@
       "style": "scss",
       "standalone": true,
       "skipTests": true,
-      "flat": true,
+      "flat": false,
       "changeDetection": "OnPush"
     },
     "@schematics/angular:directive": {
