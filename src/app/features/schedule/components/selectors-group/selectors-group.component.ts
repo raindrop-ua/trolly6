@@ -3,16 +3,18 @@ import { DaySelectorComponent } from '@features/schedule/components/day-selector
 import {
   DirectionSelectorComponent
 } from '@features/schedule/components/direction-selector/direction-selector.component';
+import { StopsSelectorComponent } from '@features/schedule/components/stops-selector/stops-selector.component';
 
 @Component({
-  selector: 'app-selectors',
+  selector: 'app-selectors-group',
   imports: [
     DaySelectorComponent,
-    DirectionSelectorComponent
+    DirectionSelectorComponent,
+    StopsSelectorComponent
   ],
-  templateUrl: './selectors.component.html',
+  templateUrl: './selectors-group.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SelectorsComponent {
+export class SelectorsGroupComponent {
 
 }
