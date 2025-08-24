@@ -6,63 +6,32 @@
     </div>
     <div class="flex items-center gap-2 text-lg text-slate-500 dark:text-slate-400">
           <span class="">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock2-icon lucide-clock-2"><path d="M12 6v6l4-2"/><circle cx="12" cy="12" r="10"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 6v6l4-2"/><circle cx="12" cy="12" r="10"/>
+            </svg>
           </span>
       <span>10:41</span>
     </div>
   </div>
 
-  <!-- Times grid (demo state colors) -->
   <div class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 gap-2">
-    <!-- past -->
-    <div class="rounded-xl bg-slate-800/10 px-3 py-2 text-center text-base text-slate-600 dark:bg-white/5 dark:text-slate-400">6:00</div>
-    <div class="rounded-xl bg-slate-800/10 px-3 py-2 text-center text-base text-slate-600 dark:bg-white/5 dark:text-slate-400">6:26</div>
-    <div class="rounded-xl bg-slate-800/10 px-3 py-2 text-center text-base text-slate-600 dark:bg-white/5 dark:text-slate-400">6:52</div>
-    <div class="rounded-xl bg-slate-800/10 px-3 py-2 text-center text-base text-slate-600 dark:bg-white/5 dark:text-slate-400">7:18</div>
-    <div class="rounded-xl bg-slate-800/10 px-3 py-2 text-center text-base text-slate-600 dark:bg-white/5 dark:text-slate-400">7:45</div>
-    <div class="rounded-xl bg-slate-800/10 px-3 py-2 text-center text-base text-slate-600 dark:bg-white/5 dark:text-slate-400">8:10</div>
-    <div class="rounded-xl bg-slate-800/10 px-3 py-2 text-center text-base text-slate-600 dark:bg-white/5 dark:text-slate-400">8:38</div>
-    <div class="rounded-xl bg-slate-800/10 px-3 py-2 text-center text-base text-slate-600 dark:bg-white/5 dark:text-slate-400">9:04</div>
-    <div class="rounded-xl bg-slate-800/10 px-3 py-2 text-center text-base text-slate-600 dark:bg-white/5 dark:text-slate-400">9:31</div>
-
-    <!-- "warning" (very soon) example -->
-    <div class="rounded-xl bg-red-500/80 px-3 py-2 text-center text-base font-semibold text-white">10:43</div>
-
-    <!-- next imminent example -->
-    <div class="rounded-xl bg-amber-400 px-3 py-2 text-center text-base font-semibold text-slate-900">11:10</div>
-
-    <!-- upcoming -->
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">11:36</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">12:02</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">12:28</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">12:54</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">13:20</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">13:46</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">14:12</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">14:38</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">15:04</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">15:30</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">15:56</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">16:22</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">16:48</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">17:14</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">17:41</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">18:08</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">18:35</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">19:02</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">19:25</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">19:52</div>
-    <div class="rounded-xl bg-teal-400/30 px-3 py-2 text-center text-base font-medium text-teal-900 dark:text-teal-100">21:07</div>
+    @for (departure of departures; track departure.time) {
+      <div
+        class="ts-time"
+        [class.ts-time--past]="departure.status === 'past'"
+        [class.ts-time--now]="departure.status === 'now'"
+        [class.ts-time--soon]="departure.status === 'soon'"
+        [class.ts-time--upcoming]="departure.status === 'coming'"
+      >{{ departure.time }}</div>
+    }
   </div>
 
-
-  <!-- legend -->
   <div class="rounded-2xl mt-4 border border-white/10 bg-white/60 p-3 shadow-sm backdrop-blur dark:bg-slate-900/40 md:p-4">
     <div class="flex flex-wrap items-center gap-3 text-xs text-slate-500 dark:text-slate-400">
-      <span class="rounded-md bg-slate-800/10 px-2 py-1 dark:bg-white/5">Past</span>
-      <span class="rounded-md bg-red-500/80 px-2 py-1 text-white">Shortly</span>
-      <span class="rounded-md bg-amber-400 px-2 py-1 text-slate-900">Soon</span>
-      <span class="rounded-md bg-teal-400/30 px-2 py-1 text-teal-900 dark:text-teal-100">Upcoming</span>
+      <span class="rounded-md px-2 py-1 ts-time--past">Past</span>
+      <span class="rounded-md px-2 py-1 ts-time--now">Now</span>
+      <span class="rounded-md px-2 py-1 ts-time--soon">Soon</span>
+      <span class="rounded-md px-2 py-1 ts-time--upcoming">Upcoming</span>
     </div>
   </div>
 </section>

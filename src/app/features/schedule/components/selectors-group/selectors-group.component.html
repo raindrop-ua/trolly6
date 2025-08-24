@@ -1,14 +1,13 @@
+<app-stops-selector [stops]="stops"/>
 <section class="container mx-auto max-w-6xl px-4">
   <div class="rounded-2xl border border-white/10 bg-white/60 p-3 shadow-sm backdrop-blur dark:bg-slate-900/40 md:p-4">
     <div class="grid gap-3 sm:grid-cols-2 md:flex md:items-center md:justify-between md:gap-0 md:divide-x md:divide-white/10">
-      <app-day-selector/>
-      <app-direction-selector/>
-      <div class="hidden md:flex md:px-3 md:items-center gap-4">
-
-      </div>
+      <app-options-selector title="Day" [options]="dayOptions"/>
+      <app-options-selector title="Direction" [options]="directionOptions"/>
+      <div class="hidden md:flex md:px-3 md:items-center gap-4"></div>
       <div class="hidden md:flex md:px-3 md:items-center gap-4">
         <div class="mx-auto text-2xl font-semibold inline-flex h-12 w-12 items-center justify-center rounded-full ring-1 ring-blue-400/40 bg-blue-400/15 text-blue-700 dark:text-blue-200">
-          <span>5</span>
+          <span>{{ availableVehicles }}</span>
         </div>
         <div class="text-blue-700 dark:text-blue-500">
           <svg width="48" height="60" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -22,18 +21,6 @@
           </svg>
         </div>
       </div>
-    </div>
-  </div>
-  <!-- Hint line -->
-  <div class="mt-3 border-t border-white/10 pt-3 text-xs text-slate-600 dark:text-slate-300">
-    <div class="flex items-center gap-x-2 gap-y-1">
-      <span class="opacity-70">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-      </span>
-      <span>
-        <span class="font-medium text-slate-800 dark:text-slate-100">Forward</span>&nbsp;—&nbsp;from Pridniprovsk to the city center;
-        <span class="font-medium text-slate-800 dark:text-slate-100">Backward</span>&nbsp;—&nbsp;from the city center to Pridniprovsk.
-      </span>
     </div>
   </div>
 </section>
