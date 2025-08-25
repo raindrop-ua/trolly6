@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { NgIf } from '@angular/common';
 import { SvgIconComponent } from '@components/svg-icon/svg-icon.component';
 import { RouterLink } from '@angular/router';
 
@@ -8,7 +7,6 @@ import { RouterLink } from '@angular/router';
   selector: 'app-sign-in',
   imports: [
     ReactiveFormsModule,
-    NgIf,
     SvgIconComponent,
     RouterLink
   ],
