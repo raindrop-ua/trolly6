@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { DecimalPipe } from '@angular/common';
 import { StopDetails } from './stop-details.model';
-import { TemperaturePipe } from './temperature.pipe';
+import { TemperaturePipe } from '../../pipes/temperature.pipe';
 
 @Component({
   selector: 'app-stop-details',
