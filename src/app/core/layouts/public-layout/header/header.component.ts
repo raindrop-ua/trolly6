@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, DestroyRef, inject, OnInit, signal } from '@angular/core';
 import { NavigationEnd, Router, RouterLink } from '@angular/router';
-import { filter, tap } from 'rxjs';
+import { filter, map, tap } from 'rxjs';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { NAVIGATION_TOKEN } from '@core/config/navigation.config';
 import { ThemeSwitcherComponent } from '@components/theme-switcher/theme-switcher.component';
@@ -8,6 +8,8 @@ import { AppRouteEnum } from '@core/enums/app-route.enum';
 import { SvgIconComponent } from '@components/svg-icon/svg-icon.component';
 import { ClockService } from '@services/clock.service';
 import { AsyncPipe, DatePipe } from '@angular/common';
+import { ScheduleMockService } from '@features/schedule/services/schedule-mock.service';
+import { Status } from '@features/schedule/components/schedule-controls/departure.model';
 
 @Component({
   selector: 'app-header',
@@ -28,6 +30,13 @@ export class HeaderComponent implements OnInit {
   private cdr = inject(ChangeDetectorRef);
   public navigation = inject(NAVIGATION_TOKEN);
   public readonly showSticky = signal<boolean>(false);
+  private readonly schedule = inject(ScheduleMockService);
+
+  readonly departures$ = this.schedule.departures$;
+
+  readonly next$ = this.departures$.pipe(
+    map(list => list.find(d => d.status === Status.Now) ?? list.find(d => d.status !== Status.Past) ?? null)
+  );
 
   public ngOnInit() {
     this.router.events
