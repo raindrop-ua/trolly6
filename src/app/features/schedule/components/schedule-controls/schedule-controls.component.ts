@@ -1,16 +1,21 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { Departure, Status } from './departure.model';
 import { SvgIconComponent } from '@components/svg-icon/svg-icon.component';
+import { ClockService } from '@services/clock.service';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'app-schedule-controls',
   imports: [
-    SvgIconComponent
+    SvgIconComponent,
+    AsyncPipe
   ],
   templateUrl: './schedule-controls.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ScheduleControlsComponent {
+  public clockService: ClockService = inject(ClockService);
+
   protected readonly departures: Departure[] = [
     {
       status: Status.Past,
