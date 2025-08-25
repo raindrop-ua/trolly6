@@ -1,27 +1,11 @@
 <div class="container mx-auto max-w-6xl px-4 py-3">
   <div class="flex items-center justify-between gap-4">
     <div class="flex items-center gap-8">
-      <a [routerLink]="[AppRouteEnum.Home]"
-         class="font-bold flex items-center  gap-2 tracking-tight text-xl md:text-2xl text-slate-900 dark:text-slate-100">
-        <svg width="24" height="30" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M11.1178 1H13.8543L11.1178 7.13072H8.38134L11.1178 1Z" fill="currentColor" />
-          <path d="M15.6907 1H18.4272L15.6907 7.13072H12.9542L15.6907 1Z" fill="currentColor" />
-          <path
-            d="M5.53682 26.6209C5.53682 26.3177 5.77864 26.0719 6.07692 26.0719H7.87725C8.17554 26.0719 8.41735 26.3177 8.41735 26.6209V28.451C8.41735 28.7542 8.17554 29 7.87725 29H6.07692C5.77864 29 5.53682 28.7542 5.53682 28.451V26.6209Z"
-            fill="currentColor" />
-          <path
-            d="M15.5827 26.6209C15.5827 26.3177 15.8245 26.0719 16.1227 26.0719H17.9231C18.2214 26.0719 18.4632 26.3177 18.4632 26.6209V28.451C18.4632 28.7542 18.2214 29 17.9231 29H16.1227C15.8245 29 15.5827 28.7542 15.5827 28.451V26.6209Z"
-            fill="currentColor" />
-          <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M19.3633 8.06405C20.1588 8.06405 20.8036 8.71953 20.8036 9.5281V25.4497C20.8036 26.2582 20.1588 26.9137 19.3633 26.9137H4.63666C3.84123 26.9137 3.1964 26.2582 3.1964 25.4497V9.5281C3.1964 8.71953 3.84123 8.06405 4.63666 8.06405H19.3633ZM7.44517 22.1922V24.0222H9.38953V22.1922H7.44517ZM14.6105 22.1922V24.0222H16.5548V22.1922H14.6105ZM5.9689 10.919V18.6052H18.0311V10.919H5.9689Z"
-                fill="currentColor" />
-          <path
-            d="M1 12.7856C1 12.6845 1.0806 12.6026 1.18003 12.6026H2.29624C2.39567 12.6026 2.47627 12.6845 2.47627 12.7856V15.8235C2.47627 15.9246 2.39567 16.0065 2.29624 16.0065H1.18003C1.0806 16.0065 1 15.9246 1 15.8235V12.7856Z"
-            fill="currentColor" />
-          <path
-            d="M21.5237 12.7856C21.5237 12.6845 21.6043 12.6026 21.7038 12.6026H22.82C22.9194 12.6026 23 12.6845 23 12.7856V15.8235C23 15.9246 22.9194 16.0065 22.82 16.0065H21.7038C21.6043 16.0065 21.5237 15.9246 21.5237 15.8235V12.7856Z"
-            fill="currentColor" />
-        </svg>
+      <a
+        [routerLink]="[AppRouteEnum.Home]"
+        class="flex items-center gap-2 text-xl font-bold tracking-tight text-slate-900 md:text-2xl dark:text-slate-100"
+      >
+        <svg icon="logo" width="24" height="30" stroke="currentColor" stroke-width="2"></svg>
         <span>Trolly <span class="text-blue-700 dark:text-yellow-500">Six</span></span>
       </a>
       <nav class="hidden md:block">
@@ -29,10 +13,12 @@
           @for (routeItem of navigation; track routeItem.path) {
             <li>
               <a
-                class="text-slate-700 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white transition"
+                class="text-slate-700 transition hover:text-slate-900 dark:text-slate-300 dark:hover:text-white"
                 [routerLink]="[routeItem.path]"
                 [class.font-semibold]="isLinkActive(routeItem.path)"
-              >{{ routeItem.label }}</a></li>
+                >{{ routeItem.label }}</a
+              >
+            </li>
           }
         </ul>
       </nav>
@@ -41,41 +27,53 @@
     <div class="flex items-center gap-4">
       <app-theme-switcher />
       <div class="md:hidden">
-        <button type="button"
-                class="cursor-pointer w-10 h-10 inline-flex items-center justify-center rounded-xl border border-gray-200/70 bg-white/80 px-3 py-2 text-sm font-medium text-gray-700 shadow-sm transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 dark:border-gray-700/70 dark:bg-gray-900/70 dark:text-gray-100 dark:hover:bg-gray-900 dark:focus-visible:outline-white">
+        <button
+          type="button"
+          class="inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-xl border border-gray-200/70 bg-white/80 px-3 py-2 text-sm font-medium text-gray-700 shadow-sm transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 dark:border-gray-700/70 dark:bg-gray-900/70 dark:text-gray-100 dark:hover:bg-gray-900 dark:focus-visible:outline-white"
+        >
           <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
           </svg>
-          <span class="sr-only">Open main menu</span></button>
+          <span class="sr-only">Open main menu</span>
+        </button>
       </div>
     </div>
   </div>
 </div>
-<div class="h-px w-full bg-gradient-to-r from-transparent via-gray-200/80 to-transparent dark:via-gray-700/70"></div>
+<div
+  class="h-px w-full bg-gradient-to-r from-transparent via-gray-200/80 to-transparent dark:via-gray-700/70"
+></div>
 
 @if (showSticky()) {
-  <div class="sticky top-[56px] z-40 sticky top-0 z-50 bg-white/60 backdrop-blur-xl dark:bg-slate-900/30">
-    <div class="container mx-auto max-w-6xl px-4 py-3 flex flex-wrap items-center justify-between gap-3">
+  <div class="sticky top-0 top-[56px] z-40 z-50 bg-white/60 backdrop-blur-xl dark:bg-slate-900/30">
+    <div
+      class="container mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-3"
+    >
       <div class="flex items-center gap-2">
-        <button type="button"
-                class="cursor-pointer rounded-xl bg-slate-900/5 px-3 py-1.5 text-sm font-medium ring-1 ring-slate-900/10 hover:bg-slate-900/10 dark:bg-white/5 dark:text-slate-200 dark:ring-white/10">
+        <button
+          type="button"
+          class="cursor-pointer rounded-xl bg-slate-900/5 px-3 py-1.5 text-sm font-medium ring-1 ring-slate-900/10 hover:bg-slate-900/10 dark:bg-white/5 dark:text-slate-200 dark:ring-white/10"
+        >
           Show all
         </button>
-        <button type="button"
-                class="cursor-pointer rounded-xl px-3 py-1.5 text-sm ring-1 ring-slate-900/10 hover:bg-slate-900/5 dark:text-slate-300 dark:ring-white/10 dark:hover:bg-white/5">
+        <button
+          type="button"
+          class="cursor-pointer rounded-xl px-3 py-1.5 text-sm ring-1 ring-slate-900/10 hover:bg-slate-900/5 dark:text-slate-300 dark:ring-white/10 dark:hover:bg-white/5"
+        >
           Upcoming
         </button>
       </div>
       <div class="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
-        <span class="">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 6v6l4-2" /><circle cx="12" cy="12" r="10" />
-          </svg>
+        <span>
+          <svg icon="clock" width="24" height="24" stroke="currentColor" stroke-width="2"></svg>
         </span>
         <span>10:41</span>
       </div>
     </div>
   </div>
 }
-

@@ -5,12 +5,14 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { NAVIGATION_TOKEN } from '@core/config/navigation.config';
 import { ThemeSwitcherComponent } from '@components/theme-switcher/theme-switcher.component';
 import { AppRouteEnum } from '@core/enums/app-route.enum';
+import { SvgIconComponent } from '@components/svg-icon/svg-icon.component';
 
 @Component({
   selector: 'app-header',
   imports: [
     RouterLink,
-    ThemeSwitcherComponent
+    ThemeSwitcherComponent,
+    SvgIconComponent
   ],
   templateUrl: './header.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
