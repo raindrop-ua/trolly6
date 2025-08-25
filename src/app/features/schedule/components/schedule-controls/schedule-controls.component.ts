@@ -1,9 +1,12 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Departure, Status } from './departure.model';
+import { SvgIconComponent } from '@components/svg-icon/svg-icon.component';
 
 @Component({
   selector: 'app-schedule-controls',
-  imports: [],
+  imports: [
+    SvgIconComponent
+  ],
   templateUrl: './schedule-controls.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
