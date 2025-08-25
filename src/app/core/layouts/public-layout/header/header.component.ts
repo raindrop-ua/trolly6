@@ -7,7 +7,7 @@ import { ThemeSwitcherComponent } from '@components/theme-switcher/theme-switche
 import { AppRouteEnum } from '@core/enums/app-route.enum';
 import { SvgIconComponent } from '@components/svg-icon/svg-icon.component';
 import { ClockService } from '@services/clock.service';
-import { AsyncPipe } from '@angular/common';
+import { AsyncPipe, DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -15,7 +15,8 @@ import { AsyncPipe } from '@angular/common';
     RouterLink,
     ThemeSwitcherComponent,
     SvgIconComponent,
-    AsyncPipe
+    AsyncPipe,
+    DatePipe
   ],
   templateUrl: './header.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,

@@ -2,13 +2,14 @@ import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { Departure, Status } from './departure.model';
 import { SvgIconComponent } from '@components/svg-icon/svg-icon.component';
 import { ClockService } from '@services/clock.service';
-import { AsyncPipe } from '@angular/common';
+import { AsyncPipe, DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-schedule-controls',
   imports: [
     SvgIconComponent,
-    AsyncPipe
+    AsyncPipe,
+    DatePipe
   ],
   templateUrl: './schedule-controls.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
