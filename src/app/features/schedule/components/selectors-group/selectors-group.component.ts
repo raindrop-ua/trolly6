@@ -4,12 +4,14 @@ import {
 } from '@features/schedule/components/options-selector/options-selector.component';
 import { StopsSelectorComponent } from '@features/schedule/components/stops-selector/stops-selector.component';
 import { Stop } from '@features/schedule/components/stops-selector/stop.model';
+import { SvgIconComponent } from '@components/svg-icon/svg-icon.component';
 
 @Component({
   selector: 'app-selectors-group',
   imports: [
     OptionsSelectorComponent,
-    StopsSelectorComponent
+    StopsSelectorComponent,
+    SvgIconComponent
   ],
   templateUrl: './selectors-group.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -39,28 +41,28 @@ export class SelectorsGroupComponent {
   ];
   public stops: Stop[] = [
     {
-      id: '1',
+      id: '21a4839e-01a9-42ad-b17d-5cd7fd83c13f',
       name: 'Pridniprovsk',
       description: 'Residential district. Near river embankment.',
       style: 1,
       availableDirections: ['forward'],
     },
     {
-      id: '2',
+      id: '5e6fd60f-97c6-4c7d-89e0-b31b859a7b70',
       name: 'Rotorna',
       description: 'Most romantic stop in Pridniprovsk.',
       style: 4,
       availableDirections: ['forward', 'backward'],
     },
     {
-      id: '3',
+      id: 'df9f0e34-5b8d-481c-b29d-ad9ab07d6226',
       name: 'Mechnikov Hospital',
       description: 'Regional clinical hospital hub.',
       style: 3,
       availableDirections: ['forward'],
     },
     {
-      id: '4',
+      id: '80d8f469-c025-403f-ba76-6af54070e2c6',
       name: 'Historical Museum',
       description: 'City center — scenic viewpoint.',
       style: 2,

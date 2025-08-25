@@ -11,12 +11,12 @@ import { provideRouter, withInMemoryScrolling, withPreloading } from '@angular/r
 import { provideServiceWorker } from '@angular/service-worker';
 
 import { NAVIGATION, NAVIGATION_TOKEN } from '@core/config/navigation.config';
+import { SeoService } from '@core/services/seo.service';
 import { AfterFirstPaintPreloadingStrategy } from '@core/strategies/after-first-paint-preloading.strategy';
 import { provideEffects } from '@ngrx/effects';
 import { provideRouterStore } from '@ngrx/router-store';
 import { provideStore } from '@ngrx/store';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
-import { SeoService } from '@shared/services/seo.service';
 
 import { routes } from './app.routes';
 
