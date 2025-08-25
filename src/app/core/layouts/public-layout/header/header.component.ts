@@ -6,19 +6,23 @@ import { NAVIGATION_TOKEN } from '@core/config/navigation.config';
 import { ThemeSwitcherComponent } from '@components/theme-switcher/theme-switcher.component';
 import { AppRouteEnum } from '@core/enums/app-route.enum';
 import { SvgIconComponent } from '@components/svg-icon/svg-icon.component';
+import { ClockService } from '@services/clock.service';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'app-header',
   imports: [
     RouterLink,
     ThemeSwitcherComponent,
-    SvgIconComponent
+    SvgIconComponent,
+    AsyncPipe
   ],
   templateUrl: './header.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent implements OnInit {
   private router = inject(Router);
+  public clockService: ClockService = inject(ClockService);
   private destroyRef = inject(DestroyRef);
   private cdr = inject(ChangeDetectorRef);
   public navigation = inject(NAVIGATION_TOKEN);
