@@ -1,32 +1,60 @@
-import { Directive, ElementRef, OnDestroy, OnInit, inject, NgZone } from '@angular/core';
+import { Directive, ElementRef, OnDestroy, OnInit, inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Directive({
   selector: 'video[appLazyVideo]',
   standalone: true,
 })
 export class LazyVideoDirective implements OnInit, OnDestroy {
-  private el = inject(ElementRef<HTMLVideoElement>).nativeElement;
-  private zone = inject(NgZone);
+  private readonly el = inject<ElementRef<HTMLVideoElement>>(ElementRef).nativeElement;
   private io?: IntersectionObserver;
+  private loaded = false;
+  private readonly platformId = inject(PLATFORM_ID);
+  private readonly isBrowser = isPlatformBrowser(this.platformId);
+
 
   ngOnInit(): void {
-    if (typeof window === 'undefined' || !('IntersectionObserver' in window)) return;
+    if (!this.isBrowser) return;
 
-    this.zone.runOutsideAngular(() => {
-      this.io = new IntersectionObserver((entries) => {
+    if (typeof IntersectionObserver === 'undefined') {
+      this.loadAndMaybePlay();
+      return;
+    }
+
+    this.el.dataset['loaded'] = 'false';
+
+    this.io = new IntersectionObserver(
+      (entries) => {
         for (const e of entries) {
           if (e.isIntersecting) {
-            this.el.load();      // подгружаем source
-            this.el.play().catch(() => {}); // автоплей (если muted)
+            this.loadAndMaybePlay();
             this.io?.disconnect();
+            break;
           }
         }
-      }, { threshold: 0.25 });
-      this.io.observe(this.el);
-    });
+      },
+      { threshold: 0.25 },
+    );
+
+    this.io.observe(this.el);
   }
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     this.io?.disconnect();
+  }
+
+  private loadAndMaybePlay(): void {
+    if (this.loaded) return;
+    this.loaded = true;
+
+    try {
+      this.el.load();
+    } catch { /* empty */ }
+
+    this.el.dataset['loaded'] = 'true';
+
+    if (this.el.muted) {
+      this.el.play().catch(() => {});
+    }
   }
 }
