@@ -8,5 +8,6 @@ import { Metric } from '@components/sections/metrics/metrics.model';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MetricsComponent {
+  public readonly mobileFullWidth = input<string>();
   public readonly data: InputSignal<readonly Metric[]> = input.required<readonly Metric[]>();
 }
