@@ -36,7 +36,7 @@ export class HomeComponent {
       description: 'on-time clarity',
     },
     {
-      title: '3',
+      title: '4',
       description: 'key stops',
     },
     {
