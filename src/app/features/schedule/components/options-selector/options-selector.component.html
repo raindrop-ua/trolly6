@@ -6,6 +6,7 @@
       <button
         type="button"
         class="selector"
+        [disabled]="option.disabled"
         [attr.aria-pressed]="isSelected"
         [class.selector--selected]="isSelected"
         (click)="select(option.value)"

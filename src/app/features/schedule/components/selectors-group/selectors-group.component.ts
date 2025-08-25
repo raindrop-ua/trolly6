@@ -27,8 +27,15 @@ export class SelectorsGroupComponent {
     }
   ];
   public directionOptions = [
-    { label: 'Forward', value: 'forward' },
-    { label: 'Backward', value: 'backward'}
+    {
+      label: 'Forward',
+      value: 'forward',
+    },
+    {
+      label: 'Backward',
+      value: 'backward',
+      disabled: true,
+    }
   ];
   public stops: Stop[] = [
     {
@@ -36,18 +43,28 @@ export class SelectorsGroupComponent {
       name: 'Pridniprovsk',
       description: 'Residential district. Near river embankment.',
       style: 1,
+      availableDirections: ['forward'],
     },
     {
       id: '2',
-      name: 'Mechnikov Hospital',
-      description: 'Regional clinical hospital hub.',
-      style: 2,
+      name: 'Rotorna',
+      description: 'Most romantic stop in Pridniprovsk.',
+      style: 4,
+      availableDirections: ['forward', 'backward'],
     },
     {
       id: '3',
+      name: 'Mechnikov Hospital',
+      description: 'Regional clinical hospital hub.',
+      style: 3,
+      availableDirections: ['forward'],
+    },
+    {
+      id: '4',
       name: 'Historical Museum',
       description: 'City center — scenic viewpoint.',
-      style: 3,
+      style: 2,
+      availableDirections: ['backward'],
     },
   ];
 }

@@ -7,6 +7,9 @@ export class TemperaturePipe implements PipeTransform {
   transform(value: number): string {
     if (value == null) return '';
 
-    return `${value > 0 ? '+' : value < 0 ? '-' : ''}${Math.abs(value).toFixed(1)}°C`;
+    if (value === 0) {
+      return '0°C';
+    }
+    return (value > 0 ? '+' : '-') + Math.abs(value) + '°C';
   }
 }
