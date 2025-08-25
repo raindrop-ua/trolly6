@@ -1,9 +1,12 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { ThemeService } from '@shared/services/theme.service';
+import {SvgIconComponent} from "@components/svg-icon/svg-icon.component";
 
 @Component({
   selector: 'app-theme-switcher',
-  imports: [],
+  imports: [
+      SvgIconComponent
+  ],
   templateUrl: './theme-switcher.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
