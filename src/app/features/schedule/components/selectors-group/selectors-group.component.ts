@@ -4,12 +4,14 @@ import {
 } from '@features/schedule/components/options-selector/options-selector.component';
 import { StopsSelectorComponent } from '@features/schedule/components/stops-selector/stops-selector.component';
 import { Stop } from '@features/schedule/components/stops-selector/stop.model';
+import { SvgIconComponent } from '@components/svg-icon/svg-icon.component';
 
 @Component({
   selector: 'app-selectors-group',
   imports: [
     OptionsSelectorComponent,
-    StopsSelectorComponent
+    StopsSelectorComponent,
+    SvgIconComponent
   ],
   templateUrl: './selectors-group.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
