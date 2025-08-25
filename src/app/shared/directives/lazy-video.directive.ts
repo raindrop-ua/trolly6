@@ -16,8 +16,8 @@ export class LazyVideoDirective implements OnInit, OnDestroy {
       this.io = new IntersectionObserver((entries) => {
         for (const e of entries) {
           if (e.isIntersecting) {
-            this.el.load();      // подгружаем source
-            this.el.play().catch(() => {}); // автоплей (если muted)
+            this.el.load();
+            this.el.play().catch(() => {});
             this.io?.disconnect();
           }
         }
