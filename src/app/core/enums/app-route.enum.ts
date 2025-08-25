@@ -4,4 +4,6 @@ export enum AppRouteEnum {
   About = 'about',
   Terms = 'terms',
   Privacy = 'privacy',
+  SignIn = 'sign-in',
+  SignUp = 'sign-up',
 }

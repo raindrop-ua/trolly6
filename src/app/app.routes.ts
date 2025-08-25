@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 
 import { PublicLayoutComponent } from '@core/layouts/public-layout/public-layout.component';
+import { SignInComponent } from '@pages/sign-in/sign-in.component';
 
 export const routes: Routes = [
   {
@@ -48,6 +49,10 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/about/about.component').then((m) => m.AboutComponent),
       },
     ],
+  },
+  {
+    path: 'sign-in',
+    component: SignInComponent,
   },
   {
     path: '**',
