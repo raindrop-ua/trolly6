@@ -81,22 +81,61 @@ export class ScheduleControlsComponent {
       status: Status.Coming,
       time: '14:12',
     },
+    {
+      status: Status.Coming,
+      time: '14:38',
+    },
+    {
+      status: Status.Coming,
+      time: '15:04',
+    },
+    {
+      status: Status.Coming,
+      time: '15:30',
+    },
+    {
+      status: Status.Coming,
+      time: '15:56',
+    },
+    {
+      status: Status.Coming,
+      time: '16:22',
+    },
+    {
+      status: Status.Coming,
+      time: '16:48',
+    },
+    {
+      status: Status.Coming,
+      time: '17:14',
+    },
+    {
+      status: Status.Coming,
+      time: '17:41',
+    },
+    {
+      status: Status.Coming,
+      time: '18:08',
+    },
+    {
+      status: Status.Coming,
+      time: '18:35',
+    },
+    {
+      status: Status.Coming,
+      time: '19:02',
+    },
+    {
+      status: Status.Coming,
+      time: '19:25',
+    },
+    {
+      status: Status.Coming,
+      time: '19:52',
+    },
+    {
+      status: Status.Coming,
+      time: '21:07',
+    },
   ];
 }
-
-/*
-14:38
-15:04
-15:30
-15:56
-16:22
-16:48
-17:14
-17:41
-18:08
-18:35
-19:02
-19:25
-19:52
-21:07
- */
