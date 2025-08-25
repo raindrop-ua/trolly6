@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { ThemeService } from '@shared/services/theme.service';
+import { ThemeService } from '@core/services/theme.service';
 import {SvgIconComponent} from "@components/svg-icon/svg-icon.component";
 
 @Component({
