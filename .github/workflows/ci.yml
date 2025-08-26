@@ -19,8 +19,30 @@ jobs:
         with:
           node-version: 24
 
-      - name: 📦 Install deps
-        run: npm ci
+      - name: 🛠️ Configure npm (retries / timeouts / auth)
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          npm config set fetch-retries 5
+          npm config set fetch-retry-factor 2
+          npm config set fetch-retry-maxtimeout 600000
+          npm config set fetch-timeout 300000
+          npm config set prefer-offline true
+          npm config set maxsockets 10
+          npm config set audit false
+          npm config set fund false
+          if [ -n "${NPM_TOKEN}" ]; then
+            echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> ~/.npmrc
+            npm config set always-auth true
+          fi
+
+      - name: 📦 Install deps (with retries)
+        run: |
+          for i in 1 2 3 4 5; do
+            npm ci --no-audit --no-fund && break
+            echo "npm ci failed (attempt $i). Sleeping $((i*15))s…"
+            sleep $((i*15))
+          done
 
       - name: 🧹 Lint
         run: npm run lint
