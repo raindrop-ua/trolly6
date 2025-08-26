@@ -1,7 +1,7 @@
 
 @layer components {
   .ts-time {
-    @apply rounded-xl px-3 py-2 text-center text-base hover:-translate-y-0.5 transition;
+    @apply rounded-xl px-3 py-2 text-center text-base hover:-translate-y-0.5 font-mono transition;
   }
 
   .ts-time-past {
