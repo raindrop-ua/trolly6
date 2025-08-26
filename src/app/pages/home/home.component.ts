@@ -60,7 +60,7 @@ export class HomeComponent {
       },
       {
         name: 'Oleh',
-        place: 'City Center',
+        place: 'Pridniprovsk',
         text: 'Route 6 - like a Swiss watch. Thanks for the simplicity and precision.',
       },
     ]
