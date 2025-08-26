@@ -52,7 +52,7 @@ export const routes: Routes = [
   },
   {
     path: 'sign-in',
-    component: SignInComponent,
+    loadComponent: () => import('./pages/sign-in/sign-in.component').then((m) => m.SignInComponent),
   },
   {
     path: '**',
