@@ -78,8 +78,8 @@ function toTodayDate(hhmm: string, now: Date): Date {
 /** Rules:
  * < 0 min → Past
  * 0..5 min → Now
- * 6..15 min → Soon
- * ≥16 min → Coming
+ * 6..20 min → Soon
+ * ≥21 min → Coming
  */
 function statusFor(now: Date, dep: Date): Status {
   const diffMinutes = Math.floor((dep.getTime() - now.getTime()) / 60000);
