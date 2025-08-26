@@ -63,6 +63,18 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/sign-in/sign-in.component').then((m) => m.SignInComponent),
   },
   {
+    path: 'admin',
+    data: {
+      preload: false,
+      animation: 'Admin',
+      seo: {
+        title: 'Administration | TrollySix',
+        description: 'Ultimate schedule for trolleybus route number 6.',
+      },
+    },
+    loadComponent: () => import('./pages/admin/admin.component').then((m) => m.AdminComponent),
+  },
+  {
     path: '**',
     redirectTo: 'schedule',
     pathMatch: 'full',
