@@ -51,6 +51,15 @@ export const routes: Routes = [
   },
   {
     path: 'sign-in',
+    data: {
+      preload: false,
+      animation: 'Sign In',
+      seo: {
+        title: 'Sign In | TrollySix',
+        description: 'Ultimate schedule for trolleybus route number 6.',
+        keywords: 'trolleybus, route 6, schedule',
+      },
+    },
     loadComponent: () => import('./pages/sign-in/sign-in.component').then((m) => m.SignInComponent),
   },
   {

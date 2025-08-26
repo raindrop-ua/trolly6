@@ -9,7 +9,7 @@
   }
 
   .ts-time--now {
-    @apply font-semibold bg-red-500/80 text-white;
+    @apply font-semibold bg-red-500/80 text-white animate-bounce;
   }
 
   .ts-time--soon {

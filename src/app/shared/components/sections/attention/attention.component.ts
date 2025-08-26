@@ -1,5 +1,4 @@
-import { ChangeDetectionStrategy, Component, ViewChild, ViewContainerRef, AfterViewInit, TemplateRef, input } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { ChangeDetectionStrategy, Component, TemplateRef, input } from '@angular/core';
 import { NgTemplateOutlet } from '@angular/common';
 
 @Component({
