@@ -26,6 +26,10 @@ export class SelectorsGroupComponent {
     {
       label: 'Weekend',
       value: 'weekend',
+    },
+    {
+      label: 'Holiday',
+      value: 'holiday',
     }
   ];
   public directionOptions = [
