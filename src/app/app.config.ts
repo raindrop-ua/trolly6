@@ -21,6 +21,7 @@ import { provideStoreDevtools } from '@ngrx/store-devtools';
 import { provideApollo } from 'apollo-angular';
 import { HttpLink } from 'apollo-angular/http';
 
+import { environment } from '../environments/environment';
 import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
@@ -60,7 +61,7 @@ export const appConfig: ApplicationConfig = {
 
       return {
         link: httpLink.create({
-          uri: '<%= endpoint %>',
+          uri: environment.apiUrl,
         }),
         cache: new InMemoryCache(),
       };
