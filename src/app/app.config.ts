@@ -64,6 +64,15 @@ export const appConfig: ApplicationConfig = {
           uri: environment.apiUrl,
         }),
         cache: new InMemoryCache(),
+        defaultOptions: {
+          watchQuery: {
+            fetchPolicy: 'cache-and-network',
+            notifyOnNetworkStatusChange: true,
+          },
+          query: {
+            fetchPolicy: 'network-only',
+          },
+        },
       };
     }),
   ],
