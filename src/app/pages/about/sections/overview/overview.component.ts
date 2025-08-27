@@ -6,7 +6,7 @@ import { RevealOnScrollDirective } from '@shared/directives/reveal-on-scroll.dir
   selector: 'app-overview',
   imports: [
     LazyVideoDirective,
-    RevealOnScrollDirective
+    RevealOnScrollDirective,
   ],
   templateUrl: './overview.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
