@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:graphql": "json-graphql-server db.cjs --p 3000 -h 127.0.0.1",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "vitest",
@@ -33,6 +34,7 @@
     "@angular/router": "^20.2.1",
     "@angular/service-worker": "^20.2.1",
     "@angular/ssr": "^20.1.6",
+    "@apollo/client": "^3.0.0",
     "@eslint/js": "^9.33.0",
     "@netlify/angular-runtime": "^2.4.0",
     "@ngrx/effects": "^20.0.1",
@@ -44,11 +46,10 @@
     "@tailwindcss/postcss": "^4.1.12",
     "apollo-angular": "^11.0.0",
     "express": "^4.18.2",
+    "graphql": "^16",
     "postcss": "^8.5.6",
     "rxjs": "~7.8.0",
-    "tslib": "^2.3.0",
-    "@apollo/client": "^3.0.0",
-    "graphql": "^16"
+    "tslib": "^2.3.0"
   },
   "devDependencies": {
     "@analogjs/storybook-angular": "^1.19.4",
@@ -82,6 +83,7 @@
     "eslint-plugin-storybook": "^9.0.18",
     "husky": "^8.0.0",
     "jsdom": "^26.1.0",
+    "json-graphql-server": "^3.3.0",
     "lint-staged": "^16.1.2",
     "postcss-scss": "^4.0.9",
     "prettier": "^3.6.2",
