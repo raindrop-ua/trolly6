@@ -10,6 +10,7 @@ import { provideClientHydration, withEventReplay } from '@angular/platform-brows
 import { provideRouter, withInMemoryScrolling, withPreloading } from '@angular/router';
 import { provideServiceWorker } from '@angular/service-worker';
 
+import { InMemoryCache } from '@apollo/client/core';
 import { NAVIGATION, NAVIGATION_TOKEN } from '@core/config/navigation.config';
 import { SeoService } from '@core/services/seo.service';
 import { AfterFirstPaintPreloadingStrategy } from '@core/strategies/after-first-paint-preloading.strategy';
@@ -17,6 +18,8 @@ import { provideEffects } from '@ngrx/effects';
 import { provideRouterStore } from '@ngrx/router-store';
 import { provideStore } from '@ngrx/store';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
+import { provideApollo } from 'apollo-angular';
+import { HttpLink } from 'apollo-angular/http';
 
 import { routes } from './app.routes';
 
@@ -51,5 +54,16 @@ export const appConfig: ApplicationConfig = {
     }),
     provideEffects(),
     provideRouterStore(),
+    provideHttpClient(),
+    provideApollo(() => {
+      const httpLink = inject(HttpLink);
+
+      return {
+        link: httpLink.create({
+          uri: '<%= endpoint %>',
+        }),
+        cache: new InMemoryCache(),
+      };
+    }),
   ],
 };
