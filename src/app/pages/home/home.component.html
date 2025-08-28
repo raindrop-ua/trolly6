@@ -1,14 +1,8 @@
 <app-masthead />
+
 <app-metrics [data]="metrics" />
-<app-promo-strips />
-<app-value-props />
+
 <app-big-claims />
-
-<app-attention [titleTemplate]="precisionTitle" [descriptionTemplate]="precisionDescription" />
-<ng-template #precisionTitle>Designed with the precision.</ng-template>
-<ng-template #precisionDescription>Every departure, every arrival — perfectly organized. Because your time deserves nothing less than perfection.</ng-template>
-
-<app-this-is-trollysix />
 
 <app-attention [titleTemplate]="worksTitle" [descriptionTemplate]="worksDescription" [ctaTemplate]="worksCTAs" />
 <ng-template #worksTitle>It just works.</ng-template>
@@ -19,4 +13,16 @@
 </ng-template>
 
 <app-testimonials [data]="testimonials" />
+
+<app-promo-strips />
+
+
+<app-attention [titleTemplate]="precisionTitle" [descriptionTemplate]="precisionDescription" />
+<ng-template #precisionTitle>Designed with the precision.</ng-template>
+<ng-template #precisionDescription>Every departure, every arrival — perfectly organized. Because your time deserves nothing less than perfection.</ng-template>
+
+<app-this-is-trollysix />
+
 <app-ready-for-route-six />
+
+<app-value-props />

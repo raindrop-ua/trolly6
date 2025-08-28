@@ -13,7 +13,7 @@ import { Metric } from '@components/sections/metrics/metrics.model';
     OverviewComponent,
     InfrastructureComponent,
     MediaComponent,
-    MetricsComponent
+    MetricsComponent,
   ],
   templateUrl: './about.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,

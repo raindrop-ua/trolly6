@@ -47,8 +47,8 @@ jobs:
       - name: 🧹 Lint
         run: npm run lint
 
-#      - name: ✅ Run tests
-#        run: npm test
+      - name: ✅ Run tests
+        run: npm test
 #
 #      - name: 📊 Coverage
 #        run: npm run test:coverage || true
